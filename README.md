@@ -1,2 +1,2 @@
-# javalearning
+# java concepts
 Java concepts practice
