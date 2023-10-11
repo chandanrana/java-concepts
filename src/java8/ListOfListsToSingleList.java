@@ -21,7 +21,12 @@ public class ConvertList {
         multiList.add(Arrays.asList(9, 0, 10, 11));
 
         List<Integer> collect = multiList.stream()
-                .flatMap(List::stream)
+                .flatMap(new Function<List<Integer>, Stream<Integer>>() {
+                    @Override
+                    public Stream<Integer> apply(List<Integer> integerList) {
+                        return integerList.stream();
+                    }
+                })
                 .toList();
 
         System.out.println(collect);

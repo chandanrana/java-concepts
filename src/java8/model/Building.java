@@ -1,6 +1,4 @@
-package java8;
-
-import java.util.Objects;
+package java8.model;
 
 public class Building {
     String name;
